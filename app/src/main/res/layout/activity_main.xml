@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#F5F5DC">
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="439dp"
+        android:layout_height="737dp"
+        android:layout_marginEnd="-185dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/seffaf2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Galata Süheyla"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#FFD700"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="338dp"
+        android:layout_height="450dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:lineSpacingExtra="8dp"
+        android:padding="16dp"
+        android:text="Preparing a fresh and delicious breakfast from start to finish at Galata Süheyla is an art for me. Behind every recipe is years of
+        experience. Everything on our menu is filled with the finest examples of traditional Turkish breakfast.
+        You will find the most special flavors in your breakfast, served with a variety of jams, organic honey, butter, and cheese varieties.
+        Especially the hot egg bread served with rose jam will take you back in time. Our menemen made with fresh tomatoes,
+        a variety of pancake/omelette options, and of course, the must-try Muhlama... You definitely have to taste that unique flavor."
+        android:textColor="#000000"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="213dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
