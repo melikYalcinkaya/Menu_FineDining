@@ -8,43 +8,55 @@
     android:background="#FFF4CE"
     tools:context=".MainActivity">
 
+
+    <!-- Arka plan görseli (Ekranın yarısını kaplayacak) -->
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="458dp"
-        android:layout_height="729dp"
+        android:id="@+id/background_image"
+        android:layout_width="221dp"
+        android:layout_height="1100dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="-10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/seffaf10"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/seffaf4"
-        tools:layout_editor_absoluteX="166dp" />
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />  <!-- Yükseklik genişliğin yarısı kadar olacak -->
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="-175dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="105dp"
+        android:elevation="1dp"
         android:fontFamily="serif"
         android:gravity="center"
         android:padding="16dp"
         android:text="Galata Süheyla"
-        android:textColor="@color/title_yellow"
+        android:textColor="#FFB400"
         android:textSize="32sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/background_image"
+        app:layout_constraintEnd_toStartOf="@+id/background_image"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="369dp"
-        android:layout_height="493dp"
-        android:layout_marginStart="-28dp"
-        android:layout_marginBottom="88dp"
+        android:layout_width="0dp"
+        android:layout_height="598dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="-40dp"
+        android:layout_marginBottom="48dp"
+        android:elevation="1dp"
         android:fontFamily="@font/ibm_semibold_italic"
         android:lineSpacingExtra="4dp"
-        android:padding="16dp"
         android:text="Preparing a fresh and delicious breakfast from start to finish at Galata Süheyla is
          an art for me. Behind every recipe is years of experience. Everything on our menu is filled with the
           finest examples of traditional Turkish breakfast. You will find the most special flavors
@@ -52,8 +64,11 @@
           Especially the hot egg bread served with rose jam will take you back in time. Our menemen made
           with fresh tomatoes, a variety of pancake/omelette options, and of course, the must-try Muhlama...
           You definitely have to taste that unique flavor."
-        android:textColor="#000000"
-        android:textSize="18sp"
+        android:textColor="#5E4A1D"
+        android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
