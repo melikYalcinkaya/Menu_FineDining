@@ -5,50 +5,55 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#F5F5DC">
-
+    android:background="#FFF4CE"
+    tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="439dp"
-        android:layout_height="737dp"
-        android:layout_marginEnd="-185dp"
+        android:id="@+id/imageView3"
+        android:layout_width="458dp"
+        android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/seffaf2" />
+        app:srcCompat="@drawable/seffaf4"
+        tools:layout_editor_absoluteX="166dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Galata Süheyla"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:textColor="#FFD700"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="-175dp"
         android:fontFamily="serif"
         android:gravity="center"
         android:padding="16dp"
-        android:layout_marginTop="20dp"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="80dp" />
+        android:text="Galata Süheyla"
+        android:textColor="@color/title_yellow"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="338dp"
-        android:layout_height="450dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:lineSpacingExtra="8dp"
+        android:layout_width="369dp"
+        android:layout_height="493dp"
+        android:layout_marginStart="-28dp"
+        android:layout_marginBottom="88dp"
+        android:fontFamily="@font/ibm_semibold_italic"
+        android:lineSpacingExtra="4dp"
         android:padding="16dp"
-        android:text="Preparing a fresh and delicious breakfast from start to finish at Galata Süheyla is an art for me. Behind every recipe is years of
-        experience. Everything on our menu is filled with the finest examples of traditional Turkish breakfast.
-        You will find the most special flavors in your breakfast, served with a variety of jams, organic honey, butter, and cheese varieties.
-        Especially the hot egg bread served with rose jam will take you back in time. Our menemen made with fresh tomatoes,
-        a variety of pancake/omelette options, and of course, the must-try Muhlama... You definitely have to taste that unique flavor."
+        android:text="Preparing a fresh and delicious breakfast from start to finish at Galata Süheyla is
+         an art for me. Behind every recipe is years of experience. Everything on our menu is filled with the
+          finest examples of traditional Turkish breakfast. You will find the most special flavors
+          in your breakfast, served with a variety of jams, organic honey, butter, and cheese varieties.
+          Especially the hot egg bread served with rose jam will take you back in time. Our menemen made
+          with fresh tomatoes, a variety of pancake/omelette options, and of course, the must-try Muhlama...
+          You definitely have to taste that unique flavor."
         android:textColor="#000000"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="213dp" />
-
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
