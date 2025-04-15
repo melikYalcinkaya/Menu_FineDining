@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment"
+    android:id="@+id/navgraph">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="melik.yalcinkaya.menu_finedining.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/dishesFragment"
+        android:name="melik.yalcinkaya.menu_finedining.dishes.DishesFragment"
+        android:label="Dishes"
+        tools:layout="@layout/fragment_dishes" />
+
+
+</navigation>

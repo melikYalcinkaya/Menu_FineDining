@@ -1,0 +1,47 @@
+melik.yalcinkaya.menu_finedining.app-pngs-0 C:\5th semester\Menu_FineDining\app\build\generated\res\pngs\debug
+melik.yalcinkaya.menu_finedining.app-resValues-1 C:\5th semester\Menu_FineDining\app\build\generated\res\resValues\debug
+melik.yalcinkaya.menu_finedining.app-packageDebugResources-2 C:\5th semester\Menu_FineDining\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+melik.yalcinkaya.menu_finedining.app-packageDebugResources-3 C:\5th semester\Menu_FineDining\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+melik.yalcinkaya.menu_finedining.app-debug-4 C:\5th semester\Menu_FineDining\app\build\intermediates\merged_res\debug\mergeDebugResources
+melik.yalcinkaya.menu_finedining.app-debug-5 C:\5th semester\Menu_FineDining\app\src\debug\res
+melik.yalcinkaya.menu_finedining.app-main-6 C:\5th semester\Menu_FineDining\app\src\main\res
+melik.yalcinkaya.menu_finedining.app-transition-1.5.0-7 C:\Users\DELL\.gradle\caches\transforms-4\008b9e64f1663ec53e5c129fc6ca9101\transformed\transition-1.5.0\res
+melik.yalcinkaya.menu_finedining.app-lifecycle-viewmodel-2.6.2-8 C:\Users\DELL\.gradle\caches\transforms-4\0660aae1e5a5bed6573fd951c963f5f1\transformed\lifecycle-viewmodel-2.6.2\res
+melik.yalcinkaya.menu_finedining.app-navigation-fragment-2.7.7-9 C:\Users\DELL\.gradle\caches\transforms-4\096fc997a8fabbf4afb4b5e26f3ef7d0\transformed\navigation-fragment-2.7.7\res
+melik.yalcinkaya.menu_finedining.app-coordinatorlayout-1.1.0-10 C:\Users\DELL\.gradle\caches\transforms-4\0e8710c740b86927c3582b79d88d846a\transformed\coordinatorlayout-1.1.0\res
+melik.yalcinkaya.menu_finedining.app-savedstate-1.2.1-11 C:\Users\DELL\.gradle\caches\transforms-4\17c623c75fae757ba26323cb28af49be\transformed\savedstate-1.2.1\res
+melik.yalcinkaya.menu_finedining.app-annotation-experimental-1.4.0-12 C:\Users\DELL\.gradle\caches\transforms-4\2d21479b5cd36952be5307cf6c51d7dd\transformed\annotation-experimental-1.4.0\res
+melik.yalcinkaya.menu_finedining.app-lifecycle-livedata-core-2.6.2-13 C:\Users\DELL\.gradle\caches\transforms-4\2e877b77c5ebc070a51fc9a96fa17f33\transformed\lifecycle-livedata-core-2.6.2\res
+melik.yalcinkaya.menu_finedining.app-emoji2-1.3.0-14 C:\Users\DELL\.gradle\caches\transforms-4\332234b7fcda6c1c631ec216b15eacce\transformed\emoji2-1.3.0\res
+melik.yalcinkaya.menu_finedining.app-lifecycle-runtime-2.6.2-15 C:\Users\DELL\.gradle\caches\transforms-4\33c8fd59575592d54738dc88cdb3f10f\transformed\lifecycle-runtime-2.6.2\res
+melik.yalcinkaya.menu_finedining.app-appcompat-1.7.0-16 C:\Users\DELL\.gradle\caches\transforms-4\355d8a60e273691dfb27c7dddfa4b65d\transformed\appcompat-1.7.0\res
+melik.yalcinkaya.menu_finedining.app-fragment-ktx-1.6.2-17 C:\Users\DELL\.gradle\caches\transforms-4\3a5cb2c103b4b10925ca5ff81945f619\transformed\fragment-ktx-1.6.2\res
+melik.yalcinkaya.menu_finedining.app-lifecycle-runtime-ktx-2.6.2-18 C:\Users\DELL\.gradle\caches\transforms-4\498fd7a61717357ed8620fad7fe45f22\transformed\lifecycle-runtime-ktx-2.6.2\res
+melik.yalcinkaya.menu_finedining.app-navigation-runtime-2.7.7-19 C:\Users\DELL\.gradle\caches\transforms-4\4e61444dbbd69a43be410cc3a7b97ecd\transformed\navigation-runtime-2.7.7\res
+melik.yalcinkaya.menu_finedining.app-cardview-1.0.0-20 C:\Users\DELL\.gradle\caches\transforms-4\51f8dd9186fe6beeea735288db8f72c8\transformed\cardview-1.0.0\res
+melik.yalcinkaya.menu_finedining.app-navigation-ui-2.7.7-21 C:\Users\DELL\.gradle\caches\transforms-4\613838b39b92dcb277136907319314e1\transformed\navigation-ui-2.7.7\res
+melik.yalcinkaya.menu_finedining.app-core-viewtree-1.0.0-22 C:\Users\DELL\.gradle\caches\transforms-4\6d7ef3eb76693f2c5aaf9087a3ebc2dd\transformed\core-viewtree-1.0.0\res
+melik.yalcinkaya.menu_finedining.app-appcompat-resources-1.7.0-23 C:\Users\DELL\.gradle\caches\transforms-4\6f934661ac7d01c20e680bb152b08fd3\transformed\appcompat-resources-1.7.0\res
+melik.yalcinkaya.menu_finedining.app-fragment-1.6.2-24 C:\Users\DELL\.gradle\caches\transforms-4\8065e7bea43e57157ecd4ee6d656a313\transformed\fragment-1.6.2\res
+melik.yalcinkaya.menu_finedining.app-core-runtime-2.2.0-25 C:\Users\DELL\.gradle\caches\transforms-4\82828243b1484d90b6805f5d5fb606bf\transformed\core-runtime-2.2.0\res
+melik.yalcinkaya.menu_finedining.app-window-1.0.0-26 C:\Users\DELL\.gradle\caches\transforms-4\8e1e1578abd80aebbad103c97fd19a11\transformed\window-1.0.0\res
+melik.yalcinkaya.menu_finedining.app-recyclerview-1.2.1-27 C:\Users\DELL\.gradle\caches\transforms-4\8f38a8365c8c051b8df2abf619ab9da2\transformed\recyclerview-1.2.1\res
+melik.yalcinkaya.menu_finedining.app-viewpager2-1.0.0-28 C:\Users\DELL\.gradle\caches\transforms-4\9153aeec7cc48411d653a8d46e5b38df\transformed\viewpager2-1.0.0\res
+melik.yalcinkaya.menu_finedining.app-core-ktx-1.13.0-29 C:\Users\DELL\.gradle\caches\transforms-4\98b7b6f3cf04a21168bed407924c8d1c\transformed\core-ktx-1.13.0\res
+melik.yalcinkaya.menu_finedining.app-lifecycle-livedata-2.6.2-30 C:\Users\DELL\.gradle\caches\transforms-4\a757d5b648a1cf115351a56649c74f3a\transformed\lifecycle-livedata-2.6.2\res
+melik.yalcinkaya.menu_finedining.app-material-1.12.0-31 C:\Users\DELL\.gradle\caches\transforms-4\af0154a9064a003e9bba165a6ef9d017\transformed\material-1.12.0\res
+melik.yalcinkaya.menu_finedining.app-profileinstaller-1.4.0-32 C:\Users\DELL\.gradle\caches\transforms-4\b24e76a620aeceaec645b887a2f1a359\transformed\profileinstaller-1.4.0\res
+melik.yalcinkaya.menu_finedining.app-navigation-common-2.7.7-33 C:\Users\DELL\.gradle\caches\transforms-4\c4bf849e71affbc64bfcf3a060626e11\transformed\navigation-common-2.7.7\res
+melik.yalcinkaya.menu_finedining.app-lifecycle-process-2.6.2-34 C:\Users\DELL\.gradle\caches\transforms-4\cc44398ed2c1826719964b95011df310\transformed\lifecycle-process-2.6.2\res
+melik.yalcinkaya.menu_finedining.app-startup-runtime-1.1.1-35 C:\Users\DELL\.gradle\caches\transforms-4\ce112ca3206e60a297e7216fcae2f650\transformed\startup-runtime-1.1.1\res
+melik.yalcinkaya.menu_finedining.app-emoji2-views-helper-1.3.0-36 C:\Users\DELL\.gradle\caches\transforms-4\cedcc745907f5345ef1b51b8a46d6e58\transformed\emoji2-views-helper-1.3.0\res
+melik.yalcinkaya.menu_finedining.app-drawerlayout-1.1.1-37 C:\Users\DELL\.gradle\caches\transforms-4\d1935f7eeb469c128fa7bb6805700232\transformed\drawerlayout-1.1.1\res
+melik.yalcinkaya.menu_finedining.app-lifecycle-livedata-core-ktx-2.6.2-38 C:\Users\DELL\.gradle\caches\transforms-4\d80241b9e5f932270651f4093a191fc3\transformed\lifecycle-livedata-core-ktx-2.6.2\res
+melik.yalcinkaya.menu_finedining.app-lifecycle-viewmodel-savedstate-2.6.2-39 C:\Users\DELL\.gradle\caches\transforms-4\d9120edd52ccdd16503e92f0ee426a16\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+melik.yalcinkaya.menu_finedining.app-activity-1.10.1-40 C:\Users\DELL\.gradle\caches\transforms-4\db0d9cdfb5b064526c32f90fd6690ae4\transformed\activity-1.10.1\res
+melik.yalcinkaya.menu_finedining.app-savedstate-ktx-1.2.1-41 C:\Users\DELL\.gradle\caches\transforms-4\dba75a4e692aa87713fd311f6579a257\transformed\savedstate-ktx-1.2.1\res
+melik.yalcinkaya.menu_finedining.app-slidingpanelayout-1.2.0-42 C:\Users\DELL\.gradle\caches\transforms-4\e24b81e80e95e5db28a016c52ff32bb1\transformed\slidingpanelayout-1.2.0\res
+melik.yalcinkaya.menu_finedining.app-lifecycle-viewmodel-ktx-2.6.2-43 C:\Users\DELL\.gradle\caches\transforms-4\e3bafcb405f2f9b9d290df41366ce9b5\transformed\lifecycle-viewmodel-ktx-2.6.2\res
+melik.yalcinkaya.menu_finedining.app-activity-ktx-1.10.1-44 C:\Users\DELL\.gradle\caches\transforms-4\eab33e74025ee0a0c774f676de6c5fda\transformed\activity-ktx-1.10.1\res
+melik.yalcinkaya.menu_finedining.app-constraintlayout-2.2.1-45 C:\Users\DELL\.gradle\caches\transforms-4\f5090c0db4b5df2058dfeb2422e11575\transformed\constraintlayout-2.2.1\res
+melik.yalcinkaya.menu_finedining.app-core-1.13.0-46 C:\Users\DELL\.gradle\caches\transforms-4\f5413e4d488b8cc8a75bd4f650d0b9bd\transformed\core-1.13.0\res

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="title_yellow">#FFCD00</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Menu_FineDining</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <style name="Base.Theme.Menu_FineDining" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+
+        <item name="android:statusBarColor">@android:color/black</item>
+        
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="Theme.Menu_FineDining" parent="Base.Theme.Menu_FineDining"/>
+</resources>
