@@ -8,16 +8,6 @@
     android:background="#FFF4CE"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/mainToolbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
@@ -29,6 +19,45 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainToolbar" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/reservationButton"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="43dp"
+        style="@null"
+        android:background="@drawable/button_reservation"
+        android:fontFamily="sans-serif-medium"
+        android:text="Make a Reservation"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#A45163"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="325dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="93dp"
+        android:background="@drawable/button_menu"
+        android:fontFamily="sans-serif-medium"
+        android:text="View Menu"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/reservationButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/reservationButton"
+        app:layout_constraintTop_toBottomOf="@+id/reservationButton"
+        app:layout_constraintVertical_bias="0.836" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
