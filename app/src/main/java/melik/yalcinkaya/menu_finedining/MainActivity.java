@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
                 R.id.homeFragment, R.id.dishesFragment
         ).build();
 
-        NavigationUI.setupActionBarWithNavController(
-                this, navController, appBarConfiguration);
+      //  NavigationUI.setupActionBarWithNavController(
+       //         this, navController, appBarConfiguration);
 
     }
 }
