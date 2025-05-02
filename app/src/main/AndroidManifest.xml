@@ -18,7 +18,9 @@
             android:exported="true">
         </activity>
 
-        
+        <activity android:name=".admin.AdminActivity" />
+
+
         <activity android:name=".EntranceActivity"
             android:exported="true">
             <intent-filter>
