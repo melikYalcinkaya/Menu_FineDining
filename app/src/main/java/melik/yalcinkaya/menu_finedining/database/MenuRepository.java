@@ -15,7 +15,7 @@ public class MenuRepository {
     public MenuRepository(Application application) {
         MenuDatabase db = MenuDatabase.getInstance(application);
         menuDao = db.menuDao();
-        allMenuItems = menuDao.getAllMenuItems();
+        allMenuItems = menuDao.getAllMenus();
         executorService = Executors.newSingleThreadExecutor();
     }
 

@@ -1,5 +1,6 @@
 package melik.yalcinkaya.menu_finedining.StartPage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,9 +32,11 @@ public class PasswordConfirmFragment extends DialogFragment {
 
             // Example password
             if ("1234".equals(enteredPassword)) {
-                Toast.makeText(getActivity(), "Access granted!", Toast.LENGTH_SHORT).show();
-                dismiss();
-                // TODO: Navigate to Manager Page here
+
+
+                Intent intent = new Intent(getActivity(), melik.yalcinkaya.menu_finedining.admin.AdminActivity.class);
+                startActivity(intent);
+
             } else {
                 Toast.makeText(getActivity(), "Wrong password!", Toast.LENGTH_SHORT).show();
             }

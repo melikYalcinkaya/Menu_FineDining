@@ -1,7 +1,11 @@
 package melik.yalcinkaya.menu_finedining.database;
 
 import androidx.lifecycle.LiveData;
-import androidx.room.*;
+import androidx.room.Dao;
+import androidx.room.Delete;
+import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -17,5 +21,5 @@ public interface MenuDao {
     void delete(MenuEntity menuEntity);
 
     @Query("SELECT * FROM menu_table ORDER BY id ASC")
-    LiveData<List<MenuEntity>> getAllMenuItems();
+    LiveData<List<MenuEntity>> getAllMenus();
 }
