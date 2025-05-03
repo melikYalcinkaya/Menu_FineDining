@@ -10,15 +10,13 @@
         android:layout_height="match_parent"
         android:padding="10dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
         android:id="@+id/fab_add_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@android:drawable/ic_input_add"
-        android:contentDescription="Add menu"
-        android:title="add"
-        app:backgroundTint="#006D04"
-        app:tint="@android:color/white"/>
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#070000"
+        android:text="+"
+        android:textColor="@android:color/white" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

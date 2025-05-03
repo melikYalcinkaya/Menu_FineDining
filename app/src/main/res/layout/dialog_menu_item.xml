@@ -12,11 +12,11 @@
         android:hint="Item Title"
         android:inputType="textCapWords" />
 
-    <CheckBox
-        android:id="@+id/cb_is_category"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_is_category"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Is Category?" />
-
+        android:hint="Item category"
+        android:inputType="textCapWords" />
+    
 </LinearLayout>

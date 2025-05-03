@@ -70,13 +70,14 @@ public class AdminMenuFragment extends Fragment {
             showMenuDialog(false, null);
         });
 
-        Executors.newSingleThreadExecutor().execute(() -> {
+        //Static adding menus
+        /*Executors.newSingleThreadExecutor().execute(() -> {
             if (menuDao.getAllMenus().getValue() == null || menuDao.getAllMenus().getValue().isEmpty()) {
                 menuDao.insert(new MenuEntity("Lamb Chops", "Grilled with rosemary", 18.5, "Main"));
                 menuDao.insert(new MenuEntity("Tomato Soup", "Fresh tomatoes and herbs", 6.0, "Starter"));
                 menuDao.insert(new MenuEntity("Chocolate Lava Cake", "With vanilla ice cream", 7.5, "Dessert"));
             }
-        });
+        });*/
 
 
     }

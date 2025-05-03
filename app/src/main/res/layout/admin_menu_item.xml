@@ -1,9 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="90dp"
     android:orientation="horizontal"
-    android:padding="8dp"
+    android:padding="5dp"
     android:gravity="center_vertical">
 
     <LinearLayout
@@ -23,24 +23,25 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="Category"
-                android:textSize="12sp" />
+                android:textSize="19sp" />
 
             <TextView
                 android:id="@+id/tv_menu_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$12.99"
-                android:textSize="12sp" />
+                android:text=" $12.99 "
+                android:textStyle="bold"
+                android:textSize="19sp" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/tv_menu_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginTop="4dp"
             android:text="Delicious Menu Item"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="4dp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,18 +53,18 @@
         <Button
             android:id="@+id/btn_edit"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edit"
-            android:textColor="@android:color/white"
+            android:layout_height="37dp"
+            android:layout_marginBottom="4dp"
             android:backgroundTint="#006D04"
-            android:layout_marginBottom="4dp" />
+            android:text="Edit"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/btn_delete"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
+            android:backgroundTint="#AF0000"
             android:text="Delete"
-            android:textColor="@android:color/white"
-            android:backgroundTint="#AF0000" />
+            android:textColor="@android:color/white" />
     </LinearLayout>
 </LinearLayout>
