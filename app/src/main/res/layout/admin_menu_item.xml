@@ -1,70 +1,89 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="90dp"
-    android:orientation="horizontal"
-    android:padding="5dp"
-    android:gravity="center_vertical">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="30dp"
+    card_view:cardElevation="30dp"
+    card_view:cardBackgroundColor="#DC0303">
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4C9FF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_menu_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Category"
+                    android:textColor="#FD0303"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"
+                    android:fontFamily="@font/lorem"/>
+
+                <TextView
+                    android:id="@+id/tv_menu_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$12.99"
+                    android:textColor="#2E7D32"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/merienda"/>
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_menu_category"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:id="@+id/tv_menu_title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Category"
-                android:textSize="19sp" />
-
-            <TextView
-                android:id="@+id/tv_menu_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" $12.99 "
-                android:textStyle="bold"
-                android:textSize="19sp" />
+                android:layout_marginTop="6dp"
+                android:text="Delicious Menu Item"
+                android:textColor="#212121"
+                android:textSize="18sp"
+                android:fontFamily="@font/merienda"
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_menu_title"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:layout_marginTop="4dp"
-            android:text="Delicious Menu Item"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
-
-        <Button
-            android:id="@+id/btn_edit"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="37dp"
-            android:layout_marginBottom="4dp"
-            android:backgroundTint="#006D04"
-            android:text="Edit"
-            android:textColor="@android:color/white" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:backgroundTint="#AF0000"
-            android:text="Delete"
-            android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:backgroundTint="#006D04"
+                android:text="Edit"
+                android:textColor="@android:color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:backgroundTint="#AF0000"
+                android:text="Delete"
+                android:textColor="@android:color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</androidx.cardview.widget.CardView>

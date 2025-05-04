@@ -86,37 +86,57 @@ public class AdminMenuFragment extends Fragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
         builder.setTitle(isEdit ? "Edit Menu Item" : "Add Menu Item");
 
-        final EditText input = new EditText(requireContext());
-        input.setInputType(InputType.TYPE_CLASS_TEXT);
-        input.setHint("Enter title");
+        View dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_add_edit_menu_item, null);
+        builder.setView(dialogView);
+
+        EditText etTitle = dialogView.findViewById(R.id.et_menu_title);
+        EditText etPrice = dialogView.findViewById(R.id.et_menu_price);
+        EditText etCategory = dialogView.findViewById(R.id.et_menu_category);
 
         if (isEdit && existing != null) {
-            input.setText(existing.getTitle());
+            etTitle.setText(existing.getTitle());
+            etPrice.setText(String.valueOf(existing.getPrice()));
+            etCategory.setText(existing.getCategory());
         }
 
-        builder.setView(input);
-
         builder.setPositiveButton(isEdit ? "Update" : "Add", (dialog, which) -> {
-            String title = input.getText().toString().trim();
-            if (!title.isEmpty()) {
-                if (isEdit && existing != null) {
-                    existing.setTitle(title);
-                    menuDao.update(existing);
-                    Toast.makeText(getContext(), "Updated successfully", Toast.LENGTH_SHORT).show();
-                } else {
-                    MenuEntity newItem = new MenuEntity(title);
-                    Executors.newSingleThreadExecutor().execute(() -> {
-                        menuDao.insert(newItem);
-                    });
+            String title = etTitle.getText().toString().trim();
+            String priceStr = etPrice.getText().toString().trim();
+            String category = etCategory.getText().toString().trim();
 
-                    Toast.makeText(getContext(), "Added successfully", Toast.LENGTH_SHORT).show();
-                }
+            if (title.isEmpty() || priceStr.isEmpty() || category.isEmpty()) {
+                Toast.makeText(getContext(), "All fields must be filled", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            double price;
+            try {
+                price = Double.parseDouble(priceStr);
+            } catch (NumberFormatException e) {
+                Toast.makeText(getContext(), "Invalid price", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (isEdit && existing != null) {
+                existing.setTitle(title);
+                existing.setPrice(price);
+                existing.setCategory(category);
+                Executors.newSingleThreadExecutor().execute(() -> {
+                    menuDao.update(existing);
+                });
+                Toast.makeText(getContext(), "Updated successfully", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(getContext(), "Title cannot be empty", Toast.LENGTH_SHORT).show();
+                MenuEntity newItem = new MenuEntity(title, "", price, category);
+                Executors.newSingleThreadExecutor().execute(() -> {
+                    menuDao.insert(newItem);
+                });
+                Toast.makeText(getContext(), "Added successfully", Toast.LENGTH_SHORT).show();
             }
         });
 
         builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
         builder.show();
     }
+
 }
+
