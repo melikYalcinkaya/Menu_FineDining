@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,6 +33,7 @@ public class AdminHomeFragment extends Fragment {
         TextView tvPeakInfo = view.findViewById(R.id.tv_peak_info);
         TextView tvFeedback = view.findViewById(R.id.tv_feedback_summary);
         RecyclerView recycler = view.findViewById(R.id.rv_dashboard);
+        CardView tv_day_background = view.findViewById(R.id.tv_day_background);
 
         // Set Day Info
         String today = new SimpleDateFormat("EEEE", Locale.getDefault()).format(new Date());
@@ -46,7 +48,8 @@ public class AdminHomeFragment extends Fragment {
             tvPeakInfo.setTextColor(getResources().getColor(android.R.color.holo_red_light));
         } else {
             tvPeakInfo.setText("Less busy hours");
-            tvPeakInfo.setTextColor(getResources().getColor(android.R.color.darker_gray));
+            tvPeakInfo.setTextColor(getResources().getColor(android.R.color.background_light));
+            tv_day_background.setCardBackgroundColor(getResources().getColor(android.R.color.holo_blue_dark));
         }
 
         // Fake Feedback for now
@@ -64,5 +67,6 @@ public class AdminHomeFragment extends Fragment {
 
         recycler.setLayoutManager(new GridLayoutManager(requireContext(), 2));
         recycler.setAdapter(new DashboardAdapter(cards));
+
     }
 }

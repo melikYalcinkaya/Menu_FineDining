@@ -9,6 +9,7 @@
 
     <!-- Peak Info Card -->
     <androidx.cardview.widget.CardView
+        android:id="@+id/tv_day_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -24,8 +25,9 @@
 
             <TextView
                 android:id="@+id/tv_day_name"
-                android:layout_width="162dp"
+                android:layout_width="232dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/ibm_italik"
                 android:text="Today is Friday"
                 android:textColor="#333"
                 android:textSize="20sp"
@@ -36,6 +38,7 @@
                 android:layout_width="261dp"
                 android:layout_height="wrap_content"
                 android:paddingTop="4dp"
+                android:fontFamily="@font/ibm_italik"
                 android:text="Peak Time Coming After 10 AM"
                 android:textColor="#D32F2F"
                 android:textSize="16sp" />
@@ -58,6 +61,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Feedbacks: 12 Total, 3 New"
+        android:fontFamily="serif"
+        android:textStyle="bold"
         android:textColor="#616161"
         android:textSize="14sp"
         android:gravity="center_horizontal"
