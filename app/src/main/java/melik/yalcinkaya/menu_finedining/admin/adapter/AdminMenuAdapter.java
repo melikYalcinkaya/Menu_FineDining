@@ -46,10 +46,13 @@ public class AdminMenuAdapter extends RecyclerView.Adapter<AdminMenuAdapter.Menu
     public void onBindViewHolder(@NonNull MenuViewHolder holder, int position) {
         MenuEntity menu = menuList.get(position);
         holder.title.setText(menu.getTitle());
+        holder.price.setText(String.format("$%.2f", menu.getPrice()));
+        holder.category.setText(menu.getCategory());
 
         holder.edit.setOnClickListener(v -> listener.onEdit(menu));
         holder.delete.setOnClickListener(v -> listener.onDelete(menu));
     }
+
 
     @Override
     public int getItemCount() {
@@ -57,14 +60,17 @@ public class AdminMenuAdapter extends RecyclerView.Adapter<AdminMenuAdapter.Menu
     }
 
     static class MenuViewHolder extends RecyclerView.ViewHolder {
-        TextView title;
+        TextView title, price, category;
         Button edit, delete;
 
         public MenuViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.tv_menu_title);
+            price = itemView.findViewById(R.id.tv_menu_price);
+            category = itemView.findViewById(R.id.tv_menu_category);
             edit = itemView.findViewById(R.id.btn_edit);
             delete = itemView.findViewById(R.id.btn_delete);
         }
     }
+
 }
