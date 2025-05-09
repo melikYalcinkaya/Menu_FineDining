@@ -17,7 +17,6 @@ public class EntranceActivity extends AppCompatActivity {
     Context context = this;
     ArrayAdapter<String> languages_adapter;
     ImageView imageView; // don't initialize here!
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
