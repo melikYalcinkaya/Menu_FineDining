@@ -1,4 +1,4 @@
-package melik.yalcinkaya.menu_finedining;
+package melik.yalcinkaya.menu_finedining.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
-import melik.yalcinkaya.menu_finedining.StartPage.PasswordConfirmFragment;
+
+import melik.yalcinkaya.menu_finedining.MainActivity;
+import melik.yalcinkaya.menu_finedining.R;
+import melik.yalcinkaya.menu_finedining.admin.PasswordConfirmFragment;
 
 public class EntranceActivity extends AppCompatActivity {
     Spinner spinner_languages;

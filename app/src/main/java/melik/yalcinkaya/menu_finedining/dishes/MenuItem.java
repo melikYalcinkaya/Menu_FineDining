@@ -1,4 +1,4 @@
-package melik.yalcinkaya.menu_finedining;
+package melik.yalcinkaya.menu_finedining.dishes;
 
 public class MenuItem {
     private String title;

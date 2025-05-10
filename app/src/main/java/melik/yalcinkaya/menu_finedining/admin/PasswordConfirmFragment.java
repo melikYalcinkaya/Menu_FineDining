@@ -1,4 +1,4 @@
-package melik.yalcinkaya.menu_finedining.StartPage;
+package melik.yalcinkaya.menu_finedining.admin;
 
 import android.content.Intent;
 import android.graphics.Color;

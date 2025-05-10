@@ -1,4 +1,4 @@
-package melik.yalcinkaya.menu_finedining.home;
+package melik.yalcinkaya.menu_finedining.fragments;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;

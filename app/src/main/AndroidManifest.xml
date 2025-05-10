@@ -21,7 +21,7 @@
         <activity android:name=".admin.AdminActivity" />
 
 
-        <activity android:name=".EntranceActivity"
+        <activity android:name=".fragments.EntranceActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
