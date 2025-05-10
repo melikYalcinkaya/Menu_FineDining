@@ -3,60 +3,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="24dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FFF4CE">   <!-- ⚠️ Add yellow background here -->
 
-        <EditText
-            android:id="@+id/editTextName"
-            android:hint="Full Name"
-            android:inputType="textPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <!-- Background image -->
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="221dp"
+            android:layout_height="1100dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="-5dp"
+            android:layout_marginBottom="-10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/seffaf10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintHorizontal_bias="0.981" />
 
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:hint="Email Address"
-            android:inputType="textEmailAddress"
-            android:layout_width="match_parent"
+        <!-- Form container on top of image -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
+            android:padding="24dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-        <EditText
-            android:id="@+id/editTextPhone"
-            android:hint="Phone Number"
-            android:inputType="phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
+            <!-- Name -->
+            <EditText
+                android:id="@+id/editTextName"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- New: Date field -->
-        <EditText
-            android:id="@+id/editTextDate"
-            android:hint="Select Date"
-            android:focusable="false"
-            android:clickable="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
+            <!-- Email -->
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/editTextName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- New: Time field -->
-        <EditText
-            android:id="@+id/editTextTime"
-            android:hint="Select Time"
-            android:focusable="false"
-            android:clickable="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
+            <!-- Phone -->
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/editTextEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <Button
-            android:id="@+id/buttonNext"
-            android:text="Next"
-            android:layout_marginTop="24dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            <!-- Date -->
+            <EditText
+                android:id="@+id/editTextDate"
+                android:hint="Select Date"
+                android:focusable="false"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/editTextPhone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Time -->
+            <EditText
+                android:id="@+id/editTextTime"
+                android:hint="Select Time"
+                android:focusable="false"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/editTextDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Next Button -->
+            <Button
+                android:id="@+id/buttonNext"
+                android:text="Next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/editTextTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -17,6 +17,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
 import melik.yalcinkaya.menu_finedining.StartPage.ReservationFormActivity;
+import melik.yalcinkaya.menu_finedining.R;
 
 public class MainActivity extends AppCompatActivity {
     private NavController navController;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         setTitle("Home");
 
-        // NavController setup (unchanged)
+        // NavController setup
         NavHostFragment navHostFragment = (NavHostFragment)
                 getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
         if (navHostFragment != null) {
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             throw new NullPointerException("NavHostFragment is null!");
         }
 
-        // --- NEW: wire up your two buttons here ---
+        // Wire up your two buttons
         buttonReservation = findViewById(R.id.button_make_reservation);
         buttonMenu        = findViewById(R.id.button_view_menu);
 
@@ -65,6 +66,17 @@ public class MainActivity extends AppCompatActivity {
         // Navigate to DishesFragment directly by ID
         buttonMenu.setOnClickListener(v -> {
             navController.navigate(R.id.dishesFragment);
+        });
+
+        // Hide/show buttons based on destination
+        navController.addOnDestinationChangedListener((controller, destination, args) -> {
+            if (destination.getId() == R.id.dishesFragment) {
+                buttonMenu.setVisibility(View.GONE);
+                buttonReservation.setVisibility(View.GONE);
+            } else {
+                buttonMenu.setVisibility(View.VISIBLE);
+                buttonReservation.setVisibility(View.VISIBLE);
+            }
         });
     }
 }

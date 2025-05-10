@@ -4,21 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dishes.DishesFragment" >
+    android:background="#FFF4CE"
+    tools:context=".dishes.DishesFragment">
 
-    <!-- 📌 RecyclerView -->
+    <!-- Background Image Styled as Reservation Page -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="221dp"
+        android:layout_height="1100dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="-10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/seffaf10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintHorizontal_bias="0.981" />
+
+    <!-- Menu List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
-        android:layout_height="276dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginBottom="600dp"
-        android:padding="16dp"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="0dp"
+        android:padding="24dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

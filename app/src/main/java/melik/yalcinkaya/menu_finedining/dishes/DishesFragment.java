@@ -31,21 +31,34 @@ public class DishesFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         menuList = new ArrayList<>();
-        menuList.add(new MenuItem("🍽 Geleneksel Kahvaltı", true));
-        menuList.add(new MenuItem("Serpme Kahvaltı",false));
-        menuList.add(new MenuItem("Köy Kahvaltısı",false));
 
-        menuList.add(new MenuItem("🔥 Sıcak Kahvaltılar", true));
-        menuList.add(new MenuItem("Menemen",false));
-        menuList.add(new MenuItem("Omlet Çeşitleri",false));
+        // 🍽 Dishes Section
+        menuList.add(new MenuItem("🍽 Breakfast Specials", true));
+        menuList.add(new MenuItem("Traditional Breakfast — $8.99", false));
+        menuList.add(new MenuItem("Village Breakfast — $9.49", false));
+        menuList.add(new MenuItem("Continental Breakfast — $7.99", false));
 
-        menuList.add(new MenuItem("🍰 Tatlılar", true));
-        menuList.add(new MenuItem("Bal Kaymak",false));
-        menuList.add(new MenuItem("Çikolatalı Krep",false));
+        menuList.add(new MenuItem("🔥 Hot Dishes", true));
+        menuList.add(new MenuItem("Menemen (Scrambled Eggs with Veggies) — $6.99", false));
+        menuList.add(new MenuItem("Cheese Omelette — $5.99", false));
+        menuList.add(new MenuItem("Mushroom Omelette — $6.49", false));
+        menuList.add(new MenuItem("Grilled Halloumi — $4.99", false));
+        menuList.add(new MenuItem("Pancakes with Maple Syrup — $5.49", false));
 
-        menuList.add(new MenuItem("🥤 İçecekler", true));
-        menuList.add(new MenuItem("Taze Sıkılmış Portakal Suyu",false));
-        menuList.add(new MenuItem("Türk Kahvesi",false));
+        menuList.add(new MenuItem("🍰 Desserts", true));
+        menuList.add(new MenuItem("Honey & Clotted Cream — $4.99", false));
+        menuList.add(new MenuItem("Chocolate Pancakes — $5.49", false));
+        menuList.add(new MenuItem("Baklava — $4.49", false));
+        menuList.add(new MenuItem("Fruit Salad — $3.99", false));
+
+        // 🥤 Drinks Section
+        menuList.add(new MenuItem("🥤 Beverages", true));
+        menuList.add(new MenuItem("Fresh Orange Juice — $2.99", false));
+        menuList.add(new MenuItem("Turkish Coffee — $2.49", false));
+        menuList.add(new MenuItem("Espresso — $2.29", false));
+        menuList.add(new MenuItem("Cappuccino — $3.49", false));
+        menuList.add(new MenuItem("Herbal Tea — $2.19", false));
+        menuList.add(new MenuItem("Mineral Water — $1.50", false));
 
         adapter = new MenuAdapter(menuList);
         recyclerView.setAdapter(adapter);
