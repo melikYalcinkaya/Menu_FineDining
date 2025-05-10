@@ -7,16 +7,32 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="melik.yalcinkaya.menu_finedining.home.HomeFragment"
+        android:name="melik.yalcinkaya.menu_finedining.fragments.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
 
-
     <fragment
-        android:id="@+id/dishesFragment"
-        android:name="melik.yalcinkaya.menu_finedining.dishes.DishesFragment"
-        android:label="Dishes"
+        android:id="@+id/menuFragment"
+        android:name="melik.yalcinkaya.menu_finedining.fragments.MenuFragment"
+        android:label="Menu"
         tools:layout="@layout/fragment_dishes" />
 
+    <fragment
+        android:id="@+id/reservationFragment"
+        android:name="melik.yalcinkaya.menu_finedining.fragments.ReservationFragment"
+        android:label="Reservation"
+        tools:layout="@layout/fragment_reservation" />
+
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="melik.yalcinkaya.menu_finedining.fragments.OrderFragment"
+        android:label="My Orders"
+        tools:layout="@layout/fragment_order" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="melik.yalcinkaya.menu_finedining.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

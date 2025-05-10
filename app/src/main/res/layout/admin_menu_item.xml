@@ -57,8 +57,7 @@
                 android:text="Delicious Menu Item"
                 android:textColor="#212121"
                 android:textSize="18sp"
-                android:fontFamily="@font/merienda"
-                android:textStyle="bold" />
+                android:textStyle="bold|italic" />
         </LinearLayout>
 
         <LinearLayout
