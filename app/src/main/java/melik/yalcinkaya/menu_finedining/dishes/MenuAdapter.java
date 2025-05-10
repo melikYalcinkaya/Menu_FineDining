@@ -1,4 +1,4 @@
-package melik.yalcinkaya.menu_finedining.home;
+package melik.yalcinkaya.menu_finedining.dishes;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,7 +7,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
-import melik.yalcinkaya.menu_finedining.MenuItem;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder> {
     private List<MenuItem> menuList;

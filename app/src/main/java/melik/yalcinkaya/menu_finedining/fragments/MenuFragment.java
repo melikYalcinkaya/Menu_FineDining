@@ -1,4 +1,4 @@
-package melik.yalcinkaya.menu_finedining.dishes;
+package melik.yalcinkaya.menu_finedining.fragments;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import melik.yalcinkaya.menu_finedining.MenuItem;
-import melik.yalcinkaya.menu_finedining.home.MenuAdapter;
 import melik.yalcinkaya.menu_finedining.R;
+import melik.yalcinkaya.menu_finedining.dishes.MenuAdapter;
+import melik.yalcinkaya.menu_finedining.dishes.MenuItem;
 
-public class DishesFragment extends Fragment {
+public class MenuFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private MenuAdapter adapter;
