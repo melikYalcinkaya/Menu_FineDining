@@ -10,6 +10,24 @@ import androidx.core.view.WindowInsetsCompat;
 
 import melik.yalcinkaya.menu_finedining.R;
 
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
