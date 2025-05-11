@@ -1,18 +1,16 @@
 package melik.yalcinkaya.menu_finedining.fragments;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Locale;
+import androidx.appcompat.app.AppCompatActivity;
 
 import melik.yalcinkaya.menu_finedining.MainActivity;
 import melik.yalcinkaya.menu_finedining.R;
@@ -23,32 +21,27 @@ public class EntranceActivity extends AppCompatActivity {
     private Spinner spinner;
     private ImageView imageViewAdmin;
     private String[] languageCodes;
-    private String[] languageDisplayNames;
-    private boolean firstSelection = true;
+    private boolean isSpinnerInitialized = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LocaleHelper.applyOverrideConfiguration(this);
         setContentView(R.layout.activity_entrance);
 
-        // Initialize views
         spinner = findViewById(R.id.spinner);
         imageViewAdmin = findViewById(R.id.imageView3);
 
         // Setup languages
-        languageDisplayNames = getResources().getStringArray(R.array.language_display_names);
         languageCodes = getResources().getStringArray(R.array.language_codes);
-
-        // Setup spinner
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_spinner_dropdown_item,
-                languageDisplayNames
-        );
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.language_display_names,
+                android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        // Set current language without triggering navigation
-        String currentLang = getSavedLanguage();
+        // Set current selection
+        String currentLang = LocaleHelper.getPersistedLanguage(this);
         for (int i = 0; i < languageCodes.length; i++) {
             if (languageCodes[i].equals(currentLang)) {
                 spinner.setSelection(i, false);
@@ -59,18 +52,15 @@ public class EntranceActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (firstSelection) {
-                    firstSelection = false;
+                if (!isSpinnerInitialized) {
+                    isSpinnerInitialized = true;
                     return;
                 }
 
-                String selectedLanguageCode = languageCodes[position];
-                setAppLocale(selectedLanguageCode);
-                saveLanguagePreference(selectedLanguageCode);
+                String selectedLanguage = languageCodes[position];
+                Log.d("LanguageSelection", "Selected: " + selectedLanguage);
 
-                // Navigate to MainActivity
-                startActivity(new Intent(EntranceActivity.this, MainActivity.class));
-                finish();
+                handleLanguageSelection(selectedLanguage);
             }
 
             @Override
@@ -83,24 +73,40 @@ public class EntranceActivity extends AppCompatActivity {
         });
     }
 
-    private void setAppLocale(String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Resources resources = getResources();
-        Configuration config = resources.getConfiguration();
-        config.setLocale(locale);
-        resources.updateConfiguration(config, resources.getDisplayMetrics());
+    private void handleLanguageSelection(String language) {
+        LocaleHelper.setLocale(this, language);
+
+        if (LocaleHelper.isRunningOnEmulator() && "en".equals(language)) {
+            // Special handling for English on emulator
+            forceEnglishRefresh();
+        } else {
+            restartApp();
+        }
     }
 
-    private void saveLanguagePreference(String languageCode) {
-        getSharedPreferences("AppPreferences", MODE_PRIVATE)
-                .edit()
-                .putString("selected_language", languageCode)
-                .apply();
+    private void forceEnglishRefresh() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra("FORCE_ENGLISH", true);
+        startActivity(intent);
+        finish();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            recreate();
+        }
     }
 
-    private String getSavedLanguage() {
-        return getSharedPreferences("AppPreferences", MODE_PRIVATE)
-                .getString("selected_language", "en");
+    private void restartApp() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
+        overridePendingTransition(0, 0);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        isSpinnerInitialized = false;
     }
 }
