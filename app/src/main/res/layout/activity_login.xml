@@ -32,7 +32,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:drawableLeft="@drawable/add"
+        android:drawableLeft="@drawable/ic_add"
         android:text="New? Create an account"
         android:textColor="@color/textColor"
         android:textSize="15sp"
