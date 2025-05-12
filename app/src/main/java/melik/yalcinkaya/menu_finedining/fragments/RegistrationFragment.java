@@ -24,29 +24,30 @@ public class RegistrationFragment extends AppCompatActivity {
         binding = ActivityRegistrationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         DatabaseReference mDatabase;
-// ...
+
+        // Initialize Firebase database reference
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         binding.registerSaveButton.setOnClickListener(view -> {
-            // Buraya Firebase'e veri yazma işlemi eklenebilir
+            // Add data to Firebase
             String name = binding.registerNameText.getText().toString();
             String email = binding.registerEmailText.getText().toString();
             String password = binding.registerPasswordText.getText().toString();
+
             mDatabase.child("users").child(name).child("email").setValue(email)
                     .addOnSuccessListener(aVoid -> {
-                        Toast.makeText(this, "Kayıt başarılı!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
                     });
             mDatabase.child("users").child(name).child("password").setValue(password)
                     .addOnFailureListener(e -> {
-                        Toast.makeText(this, "Kayıt başarısız: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Registration failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     });
         });
 
-
         binding.registerButton.setOnClickListener(view -> {
+            // Navigate to Login screen
             Intent intent = new Intent(RegistrationFragment.this, LoginFragment.class);
             startActivity(intent);
         });
-
     }
 }
