@@ -2,11 +2,7 @@ package melik.yalcinkaya.menu_finedining.fragments;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import melik.yalcinkaya.menu_finedining.MainActivity;
 import melik.yalcinkaya.menu_finedining.R;
@@ -14,12 +10,10 @@ import melik.yalcinkaya.menu_finedining.databinding.ActivityLoginBinding;
 
 import android.content.Intent;
 import android.os.Build;
-import android.os.Bundle;
 import android.view.Window;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginFragment extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
     private DatabaseReference mDatabase;
@@ -77,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                         String name = matchedUser.getKey(); // Username as key
                         String email = matchedUser.child("email").getValue(String.class);
 
-                        Toast.makeText(LoginActivity.this, "Successful Login!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginFragment.this, "Successful Login!", Toast.LENGTH_SHORT).show();
 
                         getSharedPreferences("AppPreferences", MODE_PRIVATE)
                                 .edit()
@@ -86,19 +80,19 @@ public class LoginActivity extends AppCompatActivity {
                                 .apply();
 
                         // ✅ Navigate to MainActivity (home with bottom nav)
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent intent = new Intent(LoginFragment.this, MainActivity.class);
                         intent.putExtra("user_name", name);
                         intent.putExtra("user_email", email);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(LoginActivity.this, "Incorrect email or password!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginFragment.this, "Incorrect email or password!", Toast.LENGTH_SHORT).show();
                     }
                 }
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-                    Toast.makeText(LoginActivity.this, "Failed to fetch data: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginFragment.this, "Failed to fetch data: " + error.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
         });

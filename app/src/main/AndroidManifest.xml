@@ -13,19 +13,19 @@
         android:theme="@style/Theme.Menu_FineDining"
         tools:targetApi="31">
 
-        <activity android:name=".fragments.EntranceActivity" />
+        <activity android:name=".fragments.EntranceFragment" />
         <activity
-            android:name=".fragments.LoginActivity"
+            android:name=".fragments.LoginFragment"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
         </activity>
-        <activity android:name=".admin.AdminActivity" />
+        <activity android:name=".admin.AdminMainFragment" />
 
 
         <activity
-            android:name=".fragments.RegistrationActivity"
+            android:name=".fragments.RegistrationFragment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

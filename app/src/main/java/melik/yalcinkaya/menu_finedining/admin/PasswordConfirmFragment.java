@@ -43,7 +43,7 @@ public class PasswordConfirmFragment extends DialogFragment {
         confirmButton.setOnClickListener(v -> {
             String enteredPassword = passwordInput.getText().toString();
             if ("1234".equals(enteredPassword)) {
-                Intent intent = new Intent(getActivity(), melik.yalcinkaya.menu_finedining.admin.AdminActivity.class);
+                Intent intent = new Intent(getActivity(), AdminMainFragment.class);
                 startActivity(intent);
             } else {
                 Toast.makeText(getActivity(), "Wrong password!", Toast.LENGTH_SHORT).show();

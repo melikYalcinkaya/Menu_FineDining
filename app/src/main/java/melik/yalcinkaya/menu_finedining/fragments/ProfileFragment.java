@@ -20,7 +20,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import melik.yalcinkaya.menu_finedining.R;
-import melik.yalcinkaya.menu_finedining.fragments.EntranceActivity;
 
 public class ProfileFragment extends Fragment {
 
@@ -84,7 +83,7 @@ public class ProfileFragment extends Fragment {
 
         // Buton click işlemleri
         btnChangeLanguage.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), EntranceActivity.class);
+            Intent intent = new Intent(getActivity(), EntranceFragment.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             getActivity().finish();

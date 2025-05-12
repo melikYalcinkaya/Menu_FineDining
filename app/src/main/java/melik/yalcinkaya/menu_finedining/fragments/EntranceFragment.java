@@ -16,7 +16,7 @@ import melik.yalcinkaya.menu_finedining.MainActivity;
 import melik.yalcinkaya.menu_finedining.R;
 import melik.yalcinkaya.menu_finedining.admin.PasswordConfirmFragment;
 
-public class EntranceActivity extends AppCompatActivity {
+public class EntranceFragment extends AppCompatActivity {
 
     private Spinner spinner;
     private ImageView imageViewAdmin;

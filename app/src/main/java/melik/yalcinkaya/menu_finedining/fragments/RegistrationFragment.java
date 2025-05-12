@@ -2,26 +2,18 @@ package melik.yalcinkaya.menu_finedining.fragments;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import melik.yalcinkaya.menu_finedining.R;
 import melik.yalcinkaya.menu_finedining.databinding.ActivityRegistrationBinding;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-public class RegistrationActivity extends AppCompatActivity {
+public class RegistrationFragment extends AppCompatActivity {
 
     private ActivityRegistrationBinding binding;
 
@@ -52,7 +44,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
         binding.registerButton.setOnClickListener(view -> {
-            Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+            Intent intent = new Intent(RegistrationFragment.this, LoginFragment.class);
             startActivity(intent);
         });
 

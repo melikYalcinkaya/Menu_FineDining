@@ -1,7 +1,7 @@
 package melik.yalcinkaya.menu_finedining.admin;
 
 import android.os.Bundle;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -12,7 +12,7 @@ import melik.yalcinkaya.menu_finedining.admin.fragments.AdminHomeFragment;
 import melik.yalcinkaya.menu_finedining.admin.fragments.AdminMenuFragment;
 import melik.yalcinkaya.menu_finedining.admin.fragments.AdminCustomerFragment;
 
-public class AdminActivity extends AppCompatActivity {
+public class AdminMainFragment extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
 
