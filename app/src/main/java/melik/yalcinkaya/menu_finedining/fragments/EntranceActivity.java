@@ -1,13 +1,15 @@
 package melik.yalcinkaya.menu_finedining.fragments;
 
-import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import melik.yalcinkaya.menu_finedining.MainActivity;
@@ -15,41 +17,96 @@ import melik.yalcinkaya.menu_finedining.R;
 import melik.yalcinkaya.menu_finedining.admin.PasswordConfirmFragment;
 
 public class EntranceActivity extends AppCompatActivity {
-    Spinner spinner_languages;
-    String languages[] = new String[]{"Türkçe", "English", "Arabic"};
-    Context context = this;
-    ArrayAdapter<String> languages_adapter;
-    ImageView imageView; // don't initialize here!
+
+    private Spinner spinner;
+    private ImageView imageViewAdmin;
+    private String[] languageCodes;
+    private boolean isSpinnerInitialized = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.acitivity_entrance); // correct spelling? acitivity_entrance?
+        LocaleHelper.applyOverrideConfiguration(this);
+        setContentView(R.layout.activity_entrance);
 
-        spinner_languages = findViewById(R.id.spinner);
-        imageView = findViewById(R.id.imageView3); // moved inside onCreate after setContentView
+        spinner = findViewById(R.id.spinner);
+        imageViewAdmin = findViewById(R.id.imageView3);
 
-        languages_adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, languages);
-        spinner_languages.setAdapter(languages_adapter);
+        // Setup languages
+        languageCodes = getResources().getStringArray(R.array.language_codes);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.language_display_names,
+                android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
 
-        spinner_languages.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        // Set current selection
+        String currentLang = LocaleHelper.getPersistedLanguage(this);
+        for (int i = 0; i < languageCodes.length; i++) {
+            if (languageCodes[i].equals(currentLang)) {
+                spinner.setSelection(i, false);
+                break;
+            }
+        }
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                String selectedLanguage = languages[position];
-
-                if (selectedLanguage.equals("English")) {
-                    Intent intent = new Intent(EntranceActivity.this, MainActivity.class);
-                    startActivity(intent);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (!isSpinnerInitialized) {
+                    isSpinnerInitialized = true;
+                    return;
                 }
+
+                String selectedLanguage = languageCodes[position];
+                Log.d("LanguageSelection", "Selected: " + selectedLanguage);
+
+                handleLanguageSelection(selectedLanguage);
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parentView) {}
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        imageView.setOnClickListener(v -> {
+        imageViewAdmin.setOnClickListener(v -> {
             PasswordConfirmFragment passwordDialog = new PasswordConfirmFragment();
             passwordDialog.show(getSupportFragmentManager(), "password_dialog");
         });
+    }
+
+    private void handleLanguageSelection(String language) {
+        LocaleHelper.setLocale(this, language);
+
+        if (LocaleHelper.isRunningOnEmulator() && "en".equals(language)) {
+            // Special handling for English on emulator
+            forceEnglishRefresh();
+        } else {
+            restartApp();
+        }
+    }
+
+    private void forceEnglishRefresh() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra("FORCE_ENGLISH", true);
+        startActivity(intent);
+        finish();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            recreate();
+        }
+    }
+
+    private void restartApp() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
+        overridePendingTransition(0, 0);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        isSpinnerInitialized = false;
     }
 }

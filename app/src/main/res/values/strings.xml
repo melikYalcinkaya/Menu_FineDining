@@ -1,5 +1,54 @@
 <resources>
+    <!-- English (default) -->
     <string name="app_name">Menu_FineDining</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_language">Select Language</string>
+    <string name="admin_login">Admin Login</string>
+
+    <!-- Turkish -->
+    <string name="select_language_tr">Dil Seçin</string>
+    <string name="admin_login_tr">Yönetici Girişi</string>
+
+    <!-- Arabic -->
+    <string name="select_language_ar">اختر اللغة</string>
+    <string name="admin_login_ar">تسجيل الدخول للمشرف</string>
+
+    <!-- Language arrays -->
+    <string-array name="language_display_names">
+        <item>Türkçe</item>
+        <item>English</item>
+        <item>العربية</item>
+    </string-array>
+
+    <string-array name="language_codes">
+        <item>tr</item>
+        <item>en</item>
+        <item>ar</item>
+    </string-array>
+
+    <!-- English -->
+    <string name="restaurant_title">Galata Süheyla</string>
+    <string name="restaurant_description">Preparing a fresh and delicious breakfast from start to finish at Galata Süheyla is an art for me. Behind every recipe is years of experience. Everything on our menu is filled with the finest examples of traditional Turkish breakfast. You will find the most special flavors in your breakfast, served with a variety of jams, organic honey, butter, and cheese varieties. Especially the hot egg bread served with rose jam will take you back in time. Our menemen made with fresh tomatoes, a variety of pancake/omelette options, and of course, the must-try Muhlama... You definitely have to taste that unique flavor.</string>
+
+    <!-- Turkish -->
+    <string name="restaurant_title_tr">Galata Süheyla</string>
+    <string name="restaurant_description_tr">Galata Süheyla\'da taze ve lezzetli bir kahvaltıyı baştan sona hazırlamak benim için bir sanattır. Her tarifin arkasında yılların deneyimi var. Menümüzdeki her şey, geleneksel Türk kahvaltısının en güzel örnekleriyle doludur. Kahvaltınızda çeşit çeşit reçeller, organik bal, tereyağı ve peynir çeşitleriyle servis edilen en özel lezzetleri bulacaksınız. Özellikle gül reçeli eşliğinde servis edilen sıcak yumurtalı ekmek sizi adeta zamanda yolculuğa çıkaracak. Taze domateslerle yapılan menemenimiz, çeşit çeşit gözleme/omlet seçeneklerimiz ve tabii ki mutlaka denemeniz gereken Muhlama... O eşsiz lezzeti kesinlikle tatmalısınız.</string>
+
+    <!-- Arabic -->
+    <string name="restaurant_title_ar">جالاطا سهيلا</string>
+    <string name="restaurant_description_ar">إعداد إفطار طازج ولذيذ من البداية إلى النهاية في جالاطا سهيلا هو فن بالنسبة لي. وراء كل وصفة سنوات من الخبرة. كل شيء في قائمتنا مليء بأفضل أمثلة الإفطار التركي التقليدي. ستجد النكهات الأكثر تميزًا في إفطارك، يتم تقديمه مع مجموعة متنوعة من المربيات والعسل العضوي والزبدة وأنواع الجبن. خاصة خبز البيض الساخن المقدم مع مربى الورد سينقلك إلى الماضي. منمن المصنوع من الطماطم الطازجة، ومجموعة متنوعة من خيارات البانكيك/الأومليت، وبالطبع المهلما التي يجب تجربتها... يجب عليك بالتأكيد تذوق تلك النكهة الفريدة.</string>
+
+
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_language">Change Language</string>
+    <string name="logout">Logout</string>
+
+    <!-- Turkish translations -->
+    <string name="edit_profile_tr">Profili Düzenle</string>
+    <string name="change_language_tr">Dili Değiştir</string>
+    <string name="logout_tr">Çıkış Yap</string>
+
+    <!-- Arabic translations -->
+    <string name="edit_profile_ar">تعديل الملف</string>
+    <string name="change_language_ar">تغيير اللغة</string>
+    <string name="logout_ar">تسجيل خروج</string>
 </resources>

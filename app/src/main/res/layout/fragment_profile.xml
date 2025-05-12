@@ -42,15 +42,25 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_edit_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit Profile"
+            android:text="@string/edit_profile"
             android:layout_marginTop="16dp"/>
 
         <Button
+            android:id="@+id/btn_change_language"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout"
+            android:text="@string/change_language"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/blue"/>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/black"/>
 

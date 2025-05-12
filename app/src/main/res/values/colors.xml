@@ -4,8 +4,16 @@
     <color name="white">#FFFFFFFF</color>
     <color name="title_yellow">#FFCD00</color>
     <color name="dark_blue">#00155F</color>
+    <color name="blue">#0433DE</color>
     <color name="gray">#808080</color>
     <color name="primaryColor">#6B1C02</color>
     <color name="red">#FF0000</color>
+    <color name="my_status_bar_color">#191E30</color>
+    <color name="buttonColor">#191E30</color>
+    <color name="endColor">#191E30</color>
+    <color name="startColor">#FF9800</color>
+    <color name="CenterColor">#73562C</color>
+    <color name="textColor">#FFFFFFFF</color>
+    <color name="purple_500">#191E30</color>
 
 </resources>

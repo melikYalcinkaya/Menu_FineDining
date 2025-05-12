@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "385291896478",
+    "project_id": "menufinedining",
+    "storage_bucket": "menufinedining.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385291896478:android:a7900d413fae8ed8065d8f",
+        "android_client_info": {
+          "package_name": "melik.yalcinkaya.menu_finedining"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQIks-kcO8Gs3PxhhUr6byjV78cRFzNck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
