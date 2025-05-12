@@ -7,49 +7,73 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import melik.yalcinkaya.menu_finedining.R;
-import melik.yalcinkaya.menu_finedining.dishes.MenuAdapter;
-import melik.yalcinkaya.menu_finedining.dishes.MenuItem;
 
 public class MenuFragment extends Fragment {
-
-    private RecyclerView recyclerView;
-    private MenuAdapter adapter;
-    private List<MenuItem> menuList;
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle bs) {
+        View view = inflater.inflate(R.layout.fragment_dishes, parent, false);
 
-        View view = inflater.inflate(R.layout.fragment_dishes, container, false);
+        RecyclerView rv = view.findViewById(R.id.recyclerView);
+        rv.setLayoutManager(new LinearLayoutManager(requireContext()));
 
-        recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        // build unified list
+        List<DishItem> list = new ArrayList<>();
 
-        menuList = new ArrayList<>();
-        menuList.add(new MenuItem("🍽 Geleneksel Kahvaltı", true));
-        menuList.add(new MenuItem("Serpme Kahvaltı",false));
-        menuList.add(new MenuItem("Köy Kahvaltısı",false));
+        // Breakfast
+        list.add(new DishItem("Breakfast", true));
+        list.add(new DishItem("Classic English Breakfast — $12.99", false));
+        list.add(new DishItem("Avocado Toast — $9.49", false));
+        list.add(new DishItem("Pancake Stack — $8.99", false));
+        list.add(new DishItem("French Toast — $9.49", false));
+        list.add(new DishItem("Eggs Benedict — $11.99", false));
+        list.add(new DishItem("Oatmeal Bowl — $6.99", false));
+        list.add(new DishItem("Granola Parfait — $7.49", false));
+        list.add(new DishItem("Bagel & Cream Cheese — $4.99", false));
+        list.add(new DishItem("Breakfast Burrito — $10.99", false));
+        list.add(new DishItem("Fruit Platter — $7.99", false));
 
-        menuList.add(new MenuItem("🔥 Sıcak Kahvaltılar", true));
-        menuList.add(new MenuItem("Menemen",false));
-        menuList.add(new MenuItem("Omlet Çeşitleri",false));
+        // Dinner
+        list.add(new DishItem("Dinner", true));
+        list.add(new DishItem("Grilled Salmon — $18.99", false));
+        list.add(new DishItem("Sirloin Steak — $24.99", false));
+        list.add(new DishItem("Chicken Parmesan — $16.99", false));
+        list.add(new DishItem("Lamb Chops — $22.49", false));
+        list.add(new DishItem("Vegetarian Lasagna — $14.99", false));
+        list.add(new DishItem("Shrimp Scampi — $19.99", false));
+        list.add(new DishItem("Beef Stroganoff — $17.99", false));
+        list.add(new DishItem("Pork Tenderloin — $18.49", false));
+        list.add(new DishItem("Spaghetti Carbonara — $13.99", false));
 
-        menuList.add(new MenuItem("🍰 Tatlılar", true));
-        menuList.add(new MenuItem("Bal Kaymak",false));
-        menuList.add(new MenuItem("Çikolatalı Krep",false));
+        // Desserts
+        list.add(new DishItem("Desserts", true));
+        list.add(new DishItem("Chocolate Lava Cake — $7.99", false));
+        list.add(new DishItem("Cheesecake — $6.99", false));
+        list.add(new DishItem("Tiramisu — $7.49", false));
+        list.add(new DishItem("Crème Brûlée — $6.99", false));
+        list.add(new DishItem("Apple Pie — $5.99", false));
+        list.add(new DishItem("Ice Cream Sundae — $4.99", false));
+        list.add(new DishItem("Panna Cotta — $6.49", false));
+        list.add(new DishItem("Lemon Tart — $6.99", false));
+        list.add(new DishItem("Strawberry Shortcake — $7.49", false));
+        list.add(new DishItem("Brownie à la Mode — $5.99", false));
 
-        menuList.add(new MenuItem("🥤 İçecekler", true));
-        menuList.add(new MenuItem("Taze Sıkılmış Portakal Suyu",false));
-        menuList.add(new MenuItem("Türk Kahvesi",false));
+        // Beverages
+        list.add(new DishItem("Beverages", true));
+        list.add(new DishItem("Fresh Orange Juice — $3.49", false));
+        list.add(new DishItem("Espresso — $2.99", false));
+        list.add(new DishItem("Latte — $4.49", false));
+        list.add(new DishItem("Cappuccino — $4.49", false));
+        list.add(new DishItem("Iced Tea — $2.99", false));
+        list.add(new DishItem("Herbal Tea — $2.49", false));
+        list.add(new DishItem("Mineral Water — $1.99", false));
+        list.add(new DishItem("Red Wine Glass — $6.99", false));
+        list.add(new DishItem("White Wine Glass — $6.99", false));
+        list.add(new DishItem("Craft Beer — $5.49", false));
 
-        adapter = new MenuAdapter(menuList);
-        recyclerView.setAdapter(adapter);
-
+        rv.setAdapter(new DishAdapter(list));
         return view;
     }
 }

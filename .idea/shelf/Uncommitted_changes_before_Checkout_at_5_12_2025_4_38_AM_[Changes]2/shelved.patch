@@ -1,0 +1,117 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM__Changes_.xml	(revision 03b625934607ebc5ced7726a931e52b0f072cc8d)
++++ /dev/null	(revision 03b625934607ebc5ced7726a931e52b0f072cc8d)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM_[Changes]" date="1745825028489" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 4/28/2025 9:23 AM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_4_28_2025_9_23_AM_[Changes]/shelved.patch	(revision 03b625934607ebc5ced7726a931e52b0f072cc8d)
++++ /dev/null	(revision 03b625934607ebc5ced7726a931e52b0f072cc8d)
+@@ -1,60 +0,0 @@
+-Index: .gitignore
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>*.iml\r\n.gradle\r\n/local.properties\r\n/.idea/caches\r\n/.idea/libraries\r\n/.idea/modules.xml\r\n/.idea/workspace.xml\r\n/.idea/navEditor.xml\r\n/.idea/assetWizardSettings.xml\r\n.DS_Store\r\n/build\r\n/captures\r\n.externalNativeBuild\r\n.cxx\r\nlocal.properties\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.gitignore b/.gitignore
+---- a/.gitignore	(revision b9aacb9b04a5cb6b771c1bedf7f7b882090dcb75)
+-+++ b/.gitignore	(date 1745824940654)
+-@@ -13,3 +13,4 @@
+- .externalNativeBuild
+- .cxx
+- local.properties
+-+/app/src/main/res/drawable/option_icon.xml
+-Index: .idea/runConfigurations.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+-new file mode 100644
+---- /dev/null	(date 1745824707247)
+-+++ b/.idea/runConfigurations.xml	(date 1745824707247)
+-@@ -0,0 +1,17 @@
+-+<?xml version="1.0" encoding="UTF-8"?>
+-+<project version="4">
+-+  <component name="RunConfigurationProducerService">
+-+    <option name="ignoredProducers">
+-+      <set>
+-+        <option value="com.intellij.execution.junit.AbstractAllInDirectoryConfigurationProducer" />
+-+        <option value="com.intellij.execution.junit.AllInPackageConfigurationProducer" />
+-+        <option value="com.intellij.execution.junit.PatternConfigurationProducer" />
+-+        <option value="com.intellij.execution.junit.TestInClassConfigurationProducer" />
+-+        <option value="com.intellij.execution.junit.UniqueIdConfigurationProducer" />
+-+        <option value="com.intellij.execution.junit.testDiscovery.JUnitTestDiscoveryConfigurationProducer" />
+-+        <option value="org.jetbrains.kotlin.idea.junit.KotlinJUnitRunConfigurationProducer" />
+-+        <option value="org.jetbrains.kotlin.idea.junit.KotlinPatternConfigurationProducer" />
+-+      </set>
+-+    </option>
+-+  </component>
+-+</project>
+-\ No newline at end of file
+-Index: .idea/AndroidProjectSystem.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/AndroidProjectSystem.xml b/.idea/AndroidProjectSystem.xml
+-new file mode 100644
+---- /dev/null	(date 1745824707164)
+-+++ b/.idea/AndroidProjectSystem.xml	(date 1745824707164)
+-@@ -0,0 +1,6 @@
+-+<?xml version="1.0" encoding="UTF-8"?>
+-+<project version="4">
+-+  <component name="AndroidProjectSystem">
+-+    <option name="providerId" value="com.android.tools.idea.GradleProjectSystem" />
+-+  </component>
+-+</project>
+-\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1747017025187)
++++ b/.idea/vcs.xml	(date 1747017025187)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/deploymentTargetSelector.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetSelector.xml b/.idea/deploymentTargetSelector.xml
+new file mode 100644
+--- /dev/null	(date 1747016184755)
++++ b/.idea/deploymentTargetSelector.xml	(date 1747016184755)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="deploymentTargetSelector">
++    <selectionStates>
++      <SelectionState runConfigName="app">
++        <option name="selectionMode" value="DROPDOWN" />
++      </SelectionState>
++    </selectionStates>
++  </component>
++</project>
+\ No newline at end of file

@@ -1,0 +1,104 @@
+Index: app/src/main/java/melik/yalcinkaya/menu_finedining/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package melik.yalcinkaya.menu_finedining;\r\n\r\nimport android.content.Intent;\r\nimport android.graphics.Color;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.view.Window;\r\nimport android.view.WindowManager;\r\nimport android.widget.Button;\r\n\r\nimport androidx.activity.EdgeToEdge;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.core.graphics.Insets;\r\nimport androidx.core.view.ViewCompat;\r\nimport androidx.core.view.WindowInsetsCompat;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\n\r\nimport melik.yalcinkaya.menu_finedining.StartPage.ReservationFormActivity;\r\nimport melik.yalcinkaya.menu_finedining.R;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n    private NavController navController;\r\n    private Button buttonReservation;\r\n    private Button buttonMenu;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        EdgeToEdge.enable(this);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        // Inset handling (unchanged)\r\n        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {\r\n            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());\r\n            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);\r\n            return insets;\r\n        });\r\n\r\n        // Status bar styling (unchanged)\r\n        Window window = getWindow();\r\n        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);\r\n        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);\r\n        window.setStatusBarColor(Color.BLACK);\r\n        window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);\r\n        setTitle(\"Home\");\r\n\r\n        // NavController setup\r\n        NavHostFragment navHostFragment = (NavHostFragment)\r\n                getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);\r\n        if (navHostFragment != null) {\r\n            navController = navHostFragment.getNavController();\r\n        } else {\r\n            throw new NullPointerException(\"NavHostFragment is null!\");\r\n        }\r\n\r\n        // Wire up your two buttons\r\n        buttonReservation = findViewById(R.id.button_make_reservation);\r\n        buttonMenu        = findViewById(R.id.button_view_menu);\r\n\r\n        // Launch the reservation form\r\n        buttonReservation.setOnClickListener(v -> {\r\n            startActivity(new Intent(MainActivity.this, ReservationFormActivity.class));\r\n        });\r\n\r\n        // Navigate to DishesFragment directly by ID\r\n        buttonMenu.setOnClickListener(v -> {\r\n            navController.navigate(R.id.dishesFragment);\r\n        });\r\n\r\n        // Hide/show buttons based on destination\r\n        navController.addOnDestinationChangedListener((controller, destination, args) -> {\r\n            if (destination.getId() == R.id.dishesFragment) {\r\n                buttonMenu.setVisibility(View.GONE);\r\n                buttonReservation.setVisibility(View.GONE);\r\n            } else {\r\n                buttonMenu.setVisibility(View.VISIBLE);\r\n                buttonReservation.setVisibility(View.VISIBLE);\r\n            }\r\n        });\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/melik/yalcinkaya/menu_finedining/MainActivity.java b/app/src/main/java/melik/yalcinkaya/menu_finedining/MainActivity.java
+--- a/app/src/main/java/melik/yalcinkaya/menu_finedining/MainActivity.java	(revision e85eb46ed2f654f2e72d4ec5757b3bb88a3672a4)
++++ b/app/src/main/java/melik/yalcinkaya/menu_finedining/MainActivity.java	(date 1747015353661)
+@@ -16,8 +16,7 @@
+ import androidx.navigation.NavController;
+ import androidx.navigation.fragment.NavHostFragment;
+ 
+-import melik.yalcinkaya.menu_finedining.StartPage.ReservationFormActivity;
+-import melik.yalcinkaya.menu_finedining.R;
++import melik.yalcinkaya.menu_finedining.StartPage.ReservationFragment;
+ 
+ public class MainActivity extends AppCompatActivity {
+     private NavController navController;
+@@ -60,7 +59,7 @@
+ 
+         // Launch the reservation form
+         buttonReservation.setOnClickListener(v -> {
+-            startActivity(new Intent(MainActivity.this, ReservationFormActivity.class));
++            startActivity(new Intent(MainActivity.this, ReservationFragment.class));
+         });
+ 
+         // Navigate to DishesFragment directly by ID
+Index: app/src/main/java/melik/yalcinkaya/menu_finedining/EntranceActivity.java
+===================================================================
+diff --git a/app/src/main/java/melik/yalcinkaya/menu_finedining/EntranceActivity.java b/app/src/main/java/melik/yalcinkaya/menu_finedining/EntranceFragment.java
+rename from app/src/main/java/melik/yalcinkaya/menu_finedining/EntranceActivity.java
+rename to app/src/main/java/melik/yalcinkaya/menu_finedining/EntranceFragment.java
+--- a/app/src/main/java/melik/yalcinkaya/menu_finedining/EntranceActivity.java	(revision e85eb46ed2f654f2e72d4ec5757b3bb88a3672a4)
++++ b/app/src/main/java/melik/yalcinkaya/menu_finedining/EntranceFragment.java	(date 1747015353634)
+@@ -11,7 +11,7 @@
+ import androidx.appcompat.app.AppCompatActivity;
+ import melik.yalcinkaya.menu_finedining.StartPage.PasswordConfirmFragment;
+ 
+-public class EntranceActivity extends AppCompatActivity {
++public class EntranceFragment extends AppCompatActivity {
+     Spinner spinner_languages;
+     String languages[] = new String[]{"Türkçe", "English", "Arabic"};
+     Context context = this;
+@@ -34,7 +34,7 @@
+                 String selectedLanguage = languages[position];
+ 
+                 if (selectedLanguage.equals("English")) {
+-                    Intent intent = new Intent(EntranceActivity.this, MainActivity.class);
++                    Intent intent = new Intent(EntranceFragment.this, MainActivity.class);
+                     startActivity(intent);
+                 }
+             }
+Index: app/src/main/java/melik/yalcinkaya/menu_finedining/StartPage/ReservationFormActivity.java
+===================================================================
+diff --git a/app/src/main/java/melik/yalcinkaya/menu_finedining/StartPage/ReservationFormActivity.java b/app/src/main/java/melik/yalcinkaya/menu_finedining/StartPage/ReservationFragment.java
+rename from app/src/main/java/melik/yalcinkaya/menu_finedining/StartPage/ReservationFormActivity.java
+rename to app/src/main/java/melik/yalcinkaya/menu_finedining/StartPage/ReservationFragment.java
+--- a/app/src/main/java/melik/yalcinkaya/menu_finedining/StartPage/ReservationFormActivity.java	(revision e85eb46ed2f654f2e72d4ec5757b3bb88a3672a4)
++++ b/app/src/main/java/melik/yalcinkaya/menu_finedining/StartPage/ReservationFragment.java	(date 1747015353648)
+@@ -2,7 +2,6 @@
+ 
+ import android.app.DatePickerDialog;
+ import android.app.TimePickerDialog;
+-import android.content.Intent;
+ import android.os.Bundle;
+ import android.widget.Button;
+ import android.widget.DatePicker;
+@@ -13,7 +12,7 @@
+ import melik.yalcinkaya.menu_finedining.R;
+ import java.util.Calendar;
+ 
+-public class ReservationFormActivity extends AppCompatActivity {
++public class ReservationFragment extends AppCompatActivity {
+ 
+     private EditText nameInput, emailInput, phoneInput;
+     private EditText dateInput, timeInput;
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.Menu_FineDining\"\r\n        tools:targetApi=\"31\">\r\n\r\n        <activity\r\n            android:name=\".StartPage.ReservationFormActivity\"\r\n            android:exported=\"false\" />\r\n\r\n\r\n        <!-- MainActivity handling homeFragment navigation -->\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\">\r\n        </activity>\r\n\r\n        <!-- EntranceActivity handling initial screen -->\r\n        <activity\r\n            android:name=\".EntranceActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>\r\n
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision e85eb46ed2f654f2e72d4ec5757b3bb88a3672a4)
++++ b/app/src/main/AndroidManifest.xml	(date 1747015353616)
+@@ -13,7 +13,7 @@
+         tools:targetApi="31">
+ 
+         <activity
+-            android:name=".StartPage.ReservationFormActivity"
++            android:name=".StartPage.ReservationFragment"
+             android:exported="false" />
+ 
+ 
+@@ -25,7 +25,7 @@
+ 
+         <!-- EntranceActivity handling initial screen -->
+         <activity
+-            android:name=".EntranceActivity"
++            android:name=".EntranceFragment"
+             android:exported="true">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
