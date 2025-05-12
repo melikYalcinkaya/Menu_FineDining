@@ -79,6 +79,12 @@ public class LoginActivity extends AppCompatActivity {
 
                         Toast.makeText(LoginActivity.this, "Successful Login!", Toast.LENGTH_SHORT).show();
 
+                        getSharedPreferences("AppPreferences", MODE_PRIVATE)
+                                .edit()
+                                .putString("user_name", name)
+                                .putString("user_email", email)
+                                .apply();
+
                         // ✅ Navigate to MainActivity (home with bottom nav)
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         intent.putExtra("user_name", name);
